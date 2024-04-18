@@ -14,8 +14,8 @@ RowSpacing="10"
 Margin="10,0">
 <Grid.RowDefinitions>
 <RowDefinition Height="*"/>
-<RowDefinition Height="75"/>
-<RowDefinition Height="75"/>
+<RowDefinition Height="90"/>
+<RowDefinition Height="90"/>
 <RowDefinition Height="*"/>
 <RowDefinition Height="150"/>
 </Grid.RowDefinitions>
@@ -25,43 +25,175 @@ Margin="10,0">
 <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions>
 
-<Frame x:Name="framedays"
+<Frame x:Name="frameDays"
        CornerRadius="10"
        BackgroundColor="#55ede9dd"
         Grid.Row="4"
         Grid.ColumnSpan="3">   
-</Frame>        
- <Frame x:Name="frametemp"
+</Frame>  
+
+<Frame x:Name="frameTemp"
        CornerRadius="10"
        BackgroundColor="#55ede9dd"
         Grid.Row="1"
         Grid.Column="0"
-        Grid.RowSpan="2">       
+        Grid.RowSpan="2"> 
+<Grid>
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<Label x:Name= "labelTemperatura"
+       Grid.Row="0"/>
+<Label x:Name= "labelDescrição"
+        Grid.Row="1"/>
+<Label x:Name= "labelCidade"
+        Grid.Row="2"/>   
+</Grid> 
 </Frame>
-<Frame x:Name="framerain"
+
+<Frame x:Name="frameRain"
        CornerRadius="10"
        BackgroundColor="#55ede9dd"
         Grid.Row="1"
-        Grid.Column="1">       
+        Grid.Column="1">  
+<Grid>
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+<Label Text="Chuva:"
+       FontSize="15"
+       Grid.Row="0"
+       Grid.Column="0"/>
+<Label x:Name= "labelChuva"
+        
+        Grid.Row="0"
+        Grid.Column="1"/>
+<Label Text="Umidade:"
+         FontSize="5"
+       Grid.Row="1"
+       Grid.Column="0"/>
+<Label x:Name= "labelUmidade"
+         FontSize="5"
+        Grid.Row="1"
+         Grid.Column="1"/>
+</Grid>      
 </Frame>
-<Frame x:Name="framesun"
+
+<Frame x:Name="frameSun"
+       Padding="5"
        CornerRadius="10"
        BackgroundColor="#55ede9dd"
         Grid.Row="2"
-        Grid.Column="1">       
+        Grid.Column="1"> 
+<Grid>
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+<Label x:Name= "labelSol"
+        Text="Sol"
+        HorizontalTextAlignment="Center"
+        Grid.Row="0"
+        Grid.ColumnSpan="2"/>
+<Label Text="Amanehecer:"
+        FontSize="5"
+       Grid.Row="1"
+       Grid.Column="0"/>
+<Label x:Name= "labelAmanhecer"
+        FontSize="5"
+       Grid.Row="1"
+       Grid.Column="1"/>
+<Label Text="Anoitecer:"
+        FontSize="5"
+       Grid.Row="2"
+       Grid.Column="0"/>       
+<Label x:Name= "labelAnoitecer"
+       Grid.Row="2"
+       Grid.Column="1"/>
+</Grid>         
 </Frame>
-<Frame x:Name="framewind"
+
+<Frame x:Name="frameWind"
+       Padding="5"
        CornerRadius="10"
        BackgroundColor="#55ede9dd"
         Grid.Row="1"
-        Grid.Column="2">       
+        Grid.Column="2">  
+<Grid>
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+<Label x:Name= "labelVento"
+       HorizontalTextAlignment="Center"
+       Text="Vento"
+       Grid.Row="0"
+       Grid.ColumnSpan="2"/>
+<Label Text="Força:"
+        FontSize="5"
+       Grid.Row="1"
+       Grid.Column="0"/>       
+<Label x:Name= "labelForça"
+        FontSize="5"
+       Grid.Row="1"
+       Grid.Column="1"/>
+<Label Text="Direção:"
+       FontSize="5"
+       Grid.Row="2"
+       Grid.Column="0"/>       
+<Label x:Name= "labelDireção"
+       Grid.Row="2"
+       Grid.Column="1"/>
+</Grid>      
 </Frame>
-<Frame x:Name="framemoon"
+
+<Frame x:Name="frameMoon"
+       Padding="5"
        CornerRadius="10"
        BackgroundColor="#55ede9dd"
         Grid.Row="2"
-        Grid.Column="2">   
-</Frame>            
+        Grid.Column="2"> 
+<Grid>
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+<Label x:Name= "labelLua"
+         FontSize="5"
+       Text="Lua"
+       HorizontalTextAlignment="Center"
+       Grid.Row="0"
+       Grid.ColumnSpan="2"/>
+<Label Text="Fase:"
+       Grid.Row="1"
+       Grid.Column="0"/>       
+<Label x:Name= "labelFasedalua"
+       Grid.Row="1"
+       Grid.Column="1"/>
+</Grid> 
+</Frame> 
+
 </Grid>  
 </Grid>  
 </ContentPage>
