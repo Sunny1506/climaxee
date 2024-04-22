@@ -1,7 +1,7 @@
 namespace climaxee;
 public class Results
 {
-    public int temp{get;set;}
+    public int temp{get;set;}=0;
     public string description {get;set;}
     public string city {get;set;}
     public double rain {get;set;}

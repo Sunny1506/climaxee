@@ -1,64 +1,71 @@
-﻿namespace climaxee;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+
+namespace climaxee;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-     Results resultado;
+	const string Url="https://api.hgbrasil.com/weather?woeid=455927&key=1d275343";
+	
+     Resposta resposta;
 	public MainPage()
 	{
 		InitializeComponent();
-		TestaLayout();
-		PreencherTela();
+		AtualizaTempo();
 	}
-  void TestaLayout()
-	{
-    resultado = new Results();
-		resultado.temp=23;
-		resultado.description="tempo frio";
-		resultado.rain=10;
-		resultado.city="Apucarana,PR";
-		resultado.humidity=38;
-		resultado.sunrise="06:20";
-		resultado.sunset="18:2";
-		resultado.wind_speedy=3;
-		resultado.wind_direction=395;
-		resultado.moon_phase="nova";
-		resultado.cloudness=10;
-		resultado.currently="dia";
-	}
+
 	void PreencherTela()
 	{
-		labelTemperatura.Text = resultado.temp.ToString();
-		labelDescrição.Text = resultado.description;
-		labelCidade.Text = resultado.city;
-		labelChuva.Text = resultado.rain.ToString();
-		labelUmidade.Text = resultado.humidity.ToString();
-		labelAmanhecer.Text = resultado.sunrise;
-		labelAnoitecer.Text = resultado.sunset;
-		labelForça.Text = resultado.wind_speedy.ToString();
-		labelDireção.Text = resultado.wind_direction.ToString();
-		labelFasedalua.Text = resultado.moon_phase;
+		labelTemperatura.Text = resposta.results.temp.ToString();
+		labelDescrição.Text =  resposta.results.description;
+		labelCidade.Text =  resposta.results.city;
+		labelChuva.Text =  resposta.results.rain.ToString();
+		labelUmidade.Text =  resposta.results.humidity.ToString();
+		labelAmanhecer.Text =  resposta.results.sunrise;
+		labelAnoitecer.Text =  resposta.results.sunset;
+		labelForça.Text =  resposta.results.wind_speedy.ToString();
+		labelDireção.Text =  resposta.results.wind_direction.ToString();
+		labelFasedalua.Text =  resposta.results.moon_phase;
 	   
-		if(resultado.currently == "dia")
+		if( resposta.results.currently == "dia")
 		{
-			if(resultado.rain >=10)
+			if( resposta.results.rain >=10)
 				ImgBackground.Source="diachuva.jpg";
-			else if (resultado.temp <=15)
+			else if ( resposta.results.temp <=15)
 				ImgBackground.Source="diafrio.jpg";
 			else 
 				ImgBackground.Source="diasol.jpg";
 	  }
 	  else
 	  {
-			if (resultado.rain >=10)
+			if ( resposta.results.rain >=10)
 				ImgBackground.Source="noitechuva.jpg";
-			else if (resultado.cloudness <=15)
+			else if ( resposta.results.cloudness <=15)
 				ImgBackground.Source="noitenublada.jpg";
 			else 
 				ImgBackground.Source="noiteestrelada.jpg";
 	  }
 
 	}
-}
+	async void AtualizaTempo()
+	{
+		try
+		{
+			var httpClient= new HttpClient();
+			var response= await httpClient.GetAsync(Url);
+			if(response.IsSuccessStatusCode)
+			{
+				var content= await response.Content.ReadAsStringAsync();
+				resposta= JsonSerializer.Deserialize<Resposta>(content);
+			}
+		}
+		catch(Exception e)
+		{
 
+		}
+		
+		PreencherTela();
+	
+	}
+}
 
