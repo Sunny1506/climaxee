@@ -61,7 +61,7 @@ public partial class MainPage : ContentPage
 		}
 		catch(Exception e)
 		{
-
+			System.Diagnostics.Debug.WriteLine(e);
 		}
 		
 		PreencherTela();

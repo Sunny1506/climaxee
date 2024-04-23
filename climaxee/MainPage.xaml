@@ -27,34 +27,41 @@
                      Grid.ColumnSpan="3"/>
 
               <Frame x:Name="frameTemp"
-                     Padding="0"
+                     Padding="5"
                      CornerRadius="10"
+                     Margin="10,10"
                      BackgroundColor="#55ede9dd"
-                     Grid.Row="1"
-                     Grid.Column="0"
-                     Grid.RowSpan="2"> 
+                     Grid.Row="0"
+                     Grid.ColumnSpan="3"> 
                      <Grid VerticalOptions="Center">
                             <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
                                    <RowDefinition Height="*"/>
                                    <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="*"/>
+                                   <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
                             <Label x:Name= "labelTemperatura"
                                    HorizontalTextAlignment="Center"
-                                   FontSize="50"
+                                   FontSize="80"
                                    FontFamily="fofa"
-                                   Grid.Row="0"/>
+                                   Grid.RowSpan="3"
+                                   Grid.Column="0"/>
                             <Label x:Name= "labelDescrição"
                                    HorizontalTextAlignment="Center"
-                                   Margin="0, 20"
                                    FontSize="15"
                                    FontFamily="fofa"
-                                   Grid.Row="1"/>
+                                   Grid.Row="1"
+                                   Grid.Column="1"/>
                             <Label x:Name= "labelCidade"
                                    HorizontalTextAlignment="Center"
                                    FontSize="15"
                                    FontFamily="fofa"
-                                   Grid.Row="2"/>   
+                                   Grid.Row="2"
+                                   Grid.Column="2"/>   
                      </Grid> 
               </Frame>
 
@@ -75,26 +82,26 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Text="Chuva:"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    VerticalOptions="Center"
                                    Grid.Row="0"
                                    Grid.Column="0"/>
                             <Label x:Name= "labelChuva"
-                                   FontSize="10"
+                                   FontSize="5"
                                    HorizontalTextAlignment="End"
                                    FontFamily="fofa"
                                    VerticalOptions="Center"
                                    Grid.Row="0"
                                    Grid.Column="1"/>
                             <Label Text="Umidade:"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    VerticalOptions="Center"
                                    Grid.Row="1"
                                    Grid.Column="0"/>
                             <Label x:Name= "labelUmidade"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
@@ -121,32 +128,32 @@
                             </Grid.ColumnDefinitions>
                             <Label x:Name= "labelSol"
                                    Text="Sol"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    HorizontalTextAlignment="Center"
                                    Grid.Row="0"
                                    Grid.ColumnSpan="2"/>
                             <Label Text="Amanehecer:"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="0"/>
                             <Label x:Name= "labelAmanhecer"
-                                   FontSize="10"
+                                   FontSize="5"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="1"/>
                             <Label Text="Anoitecer:"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelAnoitecer"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="1"/>
@@ -173,31 +180,31 @@
                             <Label x:Name= "labelVento"
                                    HorizontalTextAlignment="Center"
                                    Text="Vento"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="0"
                                    Grid.ColumnSpan="2"/>
                             <Label Text="Força:"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelForça"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="1"/>
                             <Label Text="Direção:"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelDireção"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="1"/>
@@ -221,7 +228,7 @@
                             </Grid.ColumnDefinitions>
                      
                             <Label x:Name= "labelLua"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Text="Lua"
                                    HorizontalTextAlignment="Center"
@@ -229,12 +236,12 @@
                                    Grid.ColumnSpan="2"/>
                             <Label Text="Fase:"
                                    FontFamily="fofa"
-                                   FontSize="10"
+                                   FontSize="5"
                                    Grid.Row="1"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelFasedalua"
                                    HorizontalTextAlignment="Center"
-                                   FontSize="10"
+                                   FontSize="5"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="1"/>

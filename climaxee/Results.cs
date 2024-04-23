@@ -8,7 +8,7 @@ public class Results
     public int humidity {get;set;}
     public string sunrise  {get;set;}
     public string sunset {get;set;}
-    public double wind_speedy {get;set;}
+    public string wind_speedy {get;set;}
     public double wind_direction {get;set;}
     public string  moon_phase {get;set;}
     public string condition_code{get;set;}

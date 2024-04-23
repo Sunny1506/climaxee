@@ -1,8 +1,8 @@
 namespace climaxee;
 public class Resposta
 {
-[
+
     
-]
-    public Results results;
+
+    public Results results{get;set;}
 }
