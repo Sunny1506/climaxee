@@ -16,7 +16,6 @@
               <Grid.ColumnDefinitions>
                      <ColumnDefinition Width="*"/>
                      <ColumnDefinition Width="*"/>
-                     <ColumnDefinition Width="*"/>
               </Grid.ColumnDefinitions>
 
               <Image x:Name="ImgBackground"
@@ -24,15 +23,15 @@
                      Grid.Row="0"
                      Grid.Column="0"
                      Grid.RowSpan="5"
-                     Grid.ColumnSpan="3"/>
+                     Grid.ColumnSpan="2"/>
 
               <Frame x:Name="frameTemp"
                      Padding="5"
                      CornerRadius="10"
                      Margin="10,10"
-                     BackgroundColor="#55ede9dd"
+                     BackgroundColor="#99ffffff"
                      Grid.Row="0"
-                     Grid.ColumnSpan="3"> 
+                     Grid.ColumnSpan="2"> 
                      <Grid VerticalOptions="Center">
                             <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
@@ -68,9 +67,9 @@
               <Frame x:Name="frameRain"
                      CornerRadius="10"
                      Padding="5"
-                     BackgroundColor="#55ede9dd"
+                     BackgroundColor="#99ffffff"
                      Grid.Row="1"
-                     Grid.Column="1">  
+                     Grid.Column="0">  
                      <Grid VerticalOptions="Fill">
                             <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
@@ -82,26 +81,26 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Text="Chuva:"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    VerticalOptions="Center"
                                    Grid.Row="0"
                                    Grid.Column="0"/>
                             <Label x:Name= "labelChuva"
-                                   FontSize="5"
+                                   FontSize="12"
                                    HorizontalTextAlignment="End"
                                    FontFamily="fofa"
                                    VerticalOptions="Center"
                                    Grid.Row="0"
                                    Grid.Column="1"/>
                             <Label Text="Umidade:"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    VerticalOptions="Center"
                                    Grid.Row="1"
                                    Grid.Column="0"/>
                             <Label x:Name= "labelUmidade"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
@@ -113,9 +112,9 @@
               <Frame x:Name="frameSun"
                      Padding="5"
                      CornerRadius="10"
-                     BackgroundColor="#55ede9dd"
+                     BackgroundColor="#99ffffff"
                      Grid.Row="2"
-                     Grid.Column="1"> 
+                     Grid.Column="0"> 
                      <Grid VerticalOptions="Fill">
                             <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
@@ -128,32 +127,32 @@
                             </Grid.ColumnDefinitions>
                             <Label x:Name= "labelSol"
                                    Text="Sol"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    HorizontalTextAlignment="Center"
                                    Grid.Row="0"
                                    Grid.ColumnSpan="2"/>
                             <Label Text="Amanehecer:"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="0"/>
                             <Label x:Name= "labelAmanhecer"
-                                   FontSize="5"
+                                   FontSize="12"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="1"/>
                             <Label Text="Anoitecer:"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelAnoitecer"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="1"/>
@@ -163,7 +162,7 @@
               <Frame x:Name="frameWind"
                      Padding="5"
                      CornerRadius="10"
-                     BackgroundColor="#55ede9dd"
+                     BackgroundColor="#99ffffff"
                      Grid.Row="1"
                      Grid.Column="2">  
                      <Grid VerticalOptions="Fill">
@@ -180,31 +179,31 @@
                             <Label x:Name= "labelVento"
                                    HorizontalTextAlignment="Center"
                                    Text="Vento"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="0"
                                    Grid.ColumnSpan="2"/>
                             <Label Text="Força:"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelForça"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="1"/>
                             <Label Text="Direção:"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelDireção"
                                    HorizontalTextAlignment="End"
                                    VerticalOptions="Center"
-                                   FontSize="5"
+                                   FontSize="12"
                                    FontFamily="fofa"
                                    Grid.Row="2"
                                    Grid.Column="1"/>
@@ -214,7 +213,7 @@
               <Frame x:Name="frameMoon"
                      Padding="5"
                      CornerRadius="10"
-                     BackgroundColor="#55ede9dd"
+                     BackgroundColor="#99ffffff"
                      Grid.Row="2"
                      Grid.Column="2"> 
                      <Grid VerticalOptions="Fill">
@@ -228,7 +227,7 @@
                             </Grid.ColumnDefinitions>
                      
                             <Label x:Name= "labelLua"
-                                   FontSize="5"
+                                   FontSize="15"
                                    FontFamily="fofa"
                                    Text="Lua"
                                    HorizontalTextAlignment="Center"
@@ -236,12 +235,12 @@
                                    Grid.ColumnSpan="2"/>
                             <Label Text="Fase:"
                                    FontFamily="fofa"
-                                   FontSize="5"
+                                   FontSize="15"
                                    Grid.Row="1"
                                    Grid.Column="0"/>       
                             <Label x:Name= "labelFasedalua"
                                    HorizontalTextAlignment="Center"
-                                   FontSize="5"
+                                   FontSize="15"
                                    FontFamily="fofa"
                                    Grid.Row="1"
                                    Grid.Column="1"/>
@@ -250,9 +249,10 @@
 
               <Frame x:Name="frameDays"
                      CornerRadius="10"
-                     BackgroundColor="#55ede9dd"
+                     Margin="10,10"
+                     BackgroundColor="#99ffffff"
                      Grid.Row="4"
-                     Grid.ColumnSpan="3">   
+                     Grid.ColumnSpan="2">   
               </Frame>  
        </Grid>  
 </ContentPage>
