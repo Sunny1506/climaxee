@@ -253,6 +253,11 @@
                      BackgroundColor="#99ffffff"
                      Grid.Row="4"
                      Grid.ColumnSpan="2">   
+                     <CollectionView X:Name="forecast">
+                     <CollectionView.ItemsLayout>
+                     <LinearItemLayout Orientatiom="Horizontal"
+                                        ItemSpancing="10"/>
+                       </CollectionView.ItemsLayout>
               </Frame>  
        </Grid>  
 </ContentPage>

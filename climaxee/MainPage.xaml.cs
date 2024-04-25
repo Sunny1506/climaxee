@@ -40,7 +40,7 @@ public partial class MainPage : ContentPage
 	  {
 			if ( resposta.results.rain >=10)
 				ImgBackground.Source="noitechuva.jpg";
-			else if ( resposta.results.cloudness <=15)
+			else if ( resposta.results.cloudiness <=15)
 				ImgBackground.Source="noitenublada.jpg";
 			else 
 				ImgBackground.Source="noiteestrelada.jpg";
