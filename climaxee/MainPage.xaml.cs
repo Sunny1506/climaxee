@@ -26,6 +26,7 @@ public partial class MainPage : ContentPage
 		labelForça.Text =  resposta.results.wind_speedy.ToString();
 		labelDireção.Text =  resposta.results.wind_direction.ToString();
 		labelFasedalua.Text =  resposta.results.moon_phase;
+		forecast.ItemsSource = resposta.results.forecast;
 	   
 		if( resposta.results.currently == "dia")
 		{

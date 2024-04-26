@@ -253,12 +253,76 @@
                      BackgroundColor="#99ffffff"
                      Grid.Row="4"
                      Grid.ColumnSpan="2">   
-                     <CollectionView X:Name="forecast">
+                     <CollectionView x:Name="forecast">
                      <CollectionView.ItemsLayout>
-                     <LinearItemLayout Orientatiom="Horizontal"
-                                        ItemSpancing="10"/>
-                       </CollectionView.ItemsLayout>
-              </Frame>  
+                     <LinearItemsLayout Orientation="Horizontal"/>
+                     </CollectionView.ItemsLayout>
+                     <CollectionView.ItemTemplate>
+                     <DataTemplate>
+                       <Frame BackgroundColor="white"
+                              BorderColor="Black"
+                              WidthRequest="200"
+                              CornerRadius="20">
+                     <Grid>
+                     <Grid.RowDefinitions>
+                     <RowDefinition Height="15"/>
+                     <RowDefinition Height="20"/>
+                     <RowDefinition Height="15"/>
+                     </Grid.RowDefinitions>
+                     <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*"/>
+                      <ColumnDefinition Width="*"/>
+                     </Grid.ColumnDefinitions>
+                     <Label Text ="{Binding date}"
+                             FontFamily="fofa"
+                            FontSize="10"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"/>
+                    <Label Text ="{Binding weekday}"
+                            FontFamily="fofa"
+                            FontSize="10"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Grid.Row="0"
+                            Grid.Column="2"/>
+                      <Label Text =" Min:"
+                            FontFamily="fofa"
+                            FontSize="10"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Grid.Row="1"
+                            Grid.Column="0"/>
+                      <Label Text =" Max:"
+                            FontFamily="fofa"
+                            FontSize="10"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Grid.Row="2"
+                            Grid.Column="0"/>
+                     <Label Text="{Binding min, StringFormat='{0}° C'}"
+                            FontFamily="fofa"
+                            FontSize="10"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Grid.Row="1"
+                            Grid.Column="1"/>
+                       <Label Text="{Binding max, StringFormat='{0}° C'}"
+                            FontSize="10"
+                            FontFamily="fofa"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Grid.Row="2"
+                            Grid.Column="1"/>
+                    
+                                 
+              </Grid>
+            </Frame>
+           </DataTemplate>
+          </CollectionView.ItemTemplate>
+         </CollectionView>
+        </Frame>  
        </Grid>  
 </ContentPage>
 
