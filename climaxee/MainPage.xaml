@@ -11,7 +11,7 @@
                      <RowDefinition Height="90"/>
                      <RowDefinition Height="90"/>
                      <RowDefinition Height="*"/>
-                     <RowDefinition Height="150"/>
+                     <RowDefinition Height="300"/>
               </Grid.RowDefinitions>
               <Grid.ColumnDefinitions>
                      <ColumnDefinition Width="*"/>
@@ -41,6 +41,7 @@
                             <Grid.ColumnDefinitions>
                                    <ColumnDefinition Width="*"/>
                                    <ColumnDefinition Width="*"/>
+                                   <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             
                             <Label x:Name= "labelTemperatura"
@@ -54,13 +55,19 @@
                                    FontSize="15"
                                    FontFamily="fofa"
                                    Grid.Row="1"
-                                   Grid.Column="1"/>
+                                   Grid.Column="2"/>
                             <Label x:Name= "labelCidade"
                                    HorizontalTextAlignment="Center"
                                    FontSize="15"
                                    FontFamily="fofa"
                                    Grid.Row="2"
-                                   Grid.Column="2"/>   
+                                   Grid.Column="2"/> 
+                            <Image Source = "{Binding clear_night}"     
+                              Aspect="Fill"
+                              HeightRequest="50"
+                              WidthRequest="50"
+                              Grid.RowSpan="3"
+                              Grid.ColumnSpan="1"/>       
                      </Grid> 
               </Frame>
 
@@ -272,6 +279,7 @@
                      <Grid.ColumnDefinitions>
                       <ColumnDefinition Width="*"/>
                       <ColumnDefinition Width="*"/>
+                      <ColumnDefinition Width="*"/>
                      </Grid.ColumnDefinitions>
                      <Label Text ="{Binding date}"
                              FontFamily="fofa"
@@ -279,7 +287,7 @@
                             TextColor="Black"
                             HorizontalOptions="Center"
                             Grid.Row="0"
-                            Grid.ColumnSpan="2"/>
+                            Grid.ColumnSpan="3"/>
                     <Label Text ="{Binding weekday}"
                             FontFamily="fofa"
                             FontSize="10"
@@ -293,29 +301,34 @@
                             TextColor="Black"
                             HorizontalOptions="Center"
                             Grid.Row="1"
-                            Grid.Column="0"/>
+                            Grid.Column="1"/>
                       <Label Text =" Max:"
                             FontFamily="fofa"
                             FontSize="10"
                             TextColor="Black"
                             HorizontalOptions="Center"
                             Grid.Row="2"
-                            Grid.Column="0"/>
+                            Grid.Column="1"/>
                      <Label Text="{Binding min, StringFormat='{0}° C'}"
                             FontFamily="fofa"
                             FontSize="10"
                             TextColor="Black"
                             HorizontalOptions="Center"
                             Grid.Row="1"
-                            Grid.Column="1"/>
+                            Grid.Column="2"/>
                        <Label Text="{Binding max, StringFormat='{0}° C'}"
                             FontSize="10"
                             FontFamily="fofa"
                             TextColor="Black"
                             HorizontalOptions="Center"
                             Grid.Row="2"
-                            Grid.Column="1"/>
-                    
+                            Grid.Column="2"/>
+                       <Image Source = "{Binding condition}"  
+                              HeightRequest="50"
+                              WidthRequest="50"   
+                              Aspect="Fill"
+                              Grid.Row="1"
+                              Grid.ColumnSpan="2"/>
                                  
               </Grid>
             </Frame>

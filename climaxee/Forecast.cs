@@ -11,7 +11,7 @@ public class Forecast
   public double rain_probability {get;set;}
   public string description {get;set;}
   public string wind_speedy {get;set;}
-  public string condition  {get;set;}
+  public string condition {get;set;}
 
 }
 
